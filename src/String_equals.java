@@ -1,5 +1,4 @@
-import java.util.HashSet;
-import java.util.Scanner;
+import java.util.*;
 
 public class String_equals {
     static Scanner sc = new Scanner(System.in);
@@ -14,16 +13,15 @@ public class String_equals {
         sc.nextLine();
         String a=sc.nextLine();
         String b = sc.nextLine();
-String c ="";
+        ArrayList<String>al = new ArrayList<String>();
         for (int i = 0; i <n ; i++) {
             if(a.charAt(i)!= b.charAt(i)){
-             c+=b.charAt(i);
+            al.add(b.charAt(i)+"");
             }
         }
-        HashSet<Character> hs = new HashSet<>();
-        for (int i = 0; i <c.length() ; i++) {
-            hs.add(c.charAt(i));
-        }
-        System.out.println(hs.size());
+
+        System.out.println(al.stream().distinct().count());
+
+
     }
 }
