@@ -11,11 +11,11 @@ public class Alternate_addition {
         int a=sc.nextInt();
         int b= sc.nextInt();
 
-        if(a%2==0 && b%2!=0){
-            System.out.println("Yes");
+        if((b-a)%3==0 || ((b-a)+2 )%3==0){
+            System.out.println("YES");
         }
         else{
-
+            System.out.println("NO");
         }
     }
 }
